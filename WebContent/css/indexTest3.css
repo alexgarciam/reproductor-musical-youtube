@@ -1,0 +1,159 @@
+@CHARSET "ISO-8859-1";
+
+/*Este contenedor coge todo el ancho de la pantalla de 1440px*/
+#contenedor{
+	
+	height: 700px;
+	border: solid 0px #FFFF00;
+	padding: 0px;
+	margin: -8px;
+}
+
+/************************************************************/
+/*****		CABECERA 									 ****/
+/************************************************************/
+
+#cabecera{
+	width: 100%;
+	height: 60px;
+	border: solid 0px #0000FF;
+}
+/************************************************************/
+/*****		CABECERA 									 ****/
+/************************************************************/
+
+
+
+/************************************************************/
+/*****		MENU SUPERIOR								 ****/
+/************************************************************/
+#menu{
+	width: 100%;
+	/* height: 115px;*/
+	border: solid 0px #0000CC;
+}
+/************************************************************/
+/*****		MENU SUPERIOR								 ****/
+/************************************************************/
+
+
+
+
+/************************************************************/
+/*****		PANEL LATERAL								 ****/
+/************************************************************/
+#capaOcultacion{
+	text-align:center;
+	position:absolute;
+	background-color:gray;
+	left:0px;
+	width:270px;
+	height:1px;
+	background-image:url('../images/texturas/textura (15).jpg');
+	background-repeat: repeat;
+	z-index: 2;	
+}
+
+/*************************************/
+/**   Panel lateral de información  **/
+/*************************************/
+
+#infoPanel1{
+	padding-top:30px;
+	color: white;
+	padding-left: 25px;
+	font-weight: bold;
+}
+
+#nombre_pl{
+	font-size: 14pt;
+	color: white;	
+}
+
+#artista_pl{
+	font-size: 12pt;
+	color: #767877;	
+}
+
+
+.TituloInfoPanelLateral{
+	color: #767877;	
+}
+
+.infoAlbum{
+	padding-right: 15px;
+	margin-right: 15px;
+	color: red;
+	}
+	
+/***************************************/
+
+
+
+
+/****************************************
+*			Zona media					*
+*****************************************/
+
+
+	/****************************************
+	*		MENU Zona media					*
+	*****************************************/
+	#menulista ul li {
+		display: inline;
+        padding: 2px 7px; /*Separar el texto*/
+        margin:5px; /* Separar los botones */
+        background-color:#E4E4E4; /* Color de fondo */
+	}
+	
+	#menulista ul li a {
+		text-decoration: none;
+		color:#666;			
+		font-size: 10pt;
+	}	
+	
+	#searchOpts a{
+		text-decoration: none;
+		color:#999;			
+		font-size: 10pt;
+	}
+	/****************************************
+	*		MENU Zona media					*
+	*****************************************/
+
+
+	/*** paneles de resultado de busqueda ***/
+	
+	.nombreCuadro{
+		color: #888;
+	}
+	
+	.artistaCuadro{
+		color: #444;
+	} 
+	
+/****************************************
+*			Zona media					*
+*****************************************/
+
+
+
+
+	
+/****************************************
+*			Modal Box					*
+*****************************************/
+
+.modalbox{
+		color: #CCCCCC;
+		text-decoration: none;
+	} 
+	
+.modalbox a:link {text-decoration: none;color: #CCCCCC;} 
+.modalbox a:visited {text-decoration: none;color: #CCCCCC;} 
+.modalbox a:active {text-decoration: none;color: #CCCCCC;} 
+.modalbox a:hover {text-decoration: none; background-color:yellow;color: #CCCCCC;}
+
+/****************************************
+*			Modal Box					*
+*****************************************/

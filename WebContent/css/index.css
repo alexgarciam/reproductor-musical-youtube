@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	
+	background-color: black;
+	/*
+	background-image: url("../images/backgrounds/Splash.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	*/
+}
+
+#central{
+	text-align:center;
+    position:absolute;
+    top:20%;
+    left: 20%;   
+}
+
+#splash{
+	background-color: black;
+}

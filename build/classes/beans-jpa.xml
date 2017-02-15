@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<tx:annotation-driven />
+	
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="Sputyfly" />
+	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="jpaTemplate" class="org.springframework.orm.jpa.JpaTemplate">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	
+		<!-- DAO'S -->
+	
+	<bean name="userDao" class="es.alex.futvre.persistence.UserDao">
+		<property name="jpaTemplate" ref="jpaTemplate" />
+	</bean>
+	
+	<bean name="authorityDao" class="es.alex.futvre.persistence.AuthorityDao">
+		<property name="jpaTemplate" ref="jpaTemplate" />
+	</bean>
+	
+	<bean name="listaDao" class="es.alex.futvre.persistence.ListaDao">
+		<property name="jpaTemplate" ref="jpaTemplate" />
+	</bean>
+	
+	<bean name="cancionDao" class="es.alex.futvre.persistence.CancionDao">
+		<property name="jpaTemplate" ref="jpaTemplate" />
+	</bean>
+	
+	<bean name="favoritoDao" class="es.alex.futvre.persistence.FavoritosDao">
+		<property name="jpaTemplate" ref="jpaTemplate" />
+	</bean>
+	
+		<!-- DAO'S -->
+	
+</beans>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- ========================= RESOURCE DEFINITIONS ========================= -->
+	
+	<bean id="myDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/sputy"/>
+		<property name="username" value="sputy"/>
+		<property name="password" value="4l3j4ndr0"/>
+	</bean>	
+	
+	<bean id="customUserDetailsService" class="es.isoin.futvre.service.security.CustomUserDetailService">
+	</bean>	
+					
+	<!-- Servicios 	-->	
+	<bean id="novedadesService" class="es.alex.futvre.service.novedades.NovedadesServiceImpl" >		
+	</bean>
+	<bean id="youtubeService" class="es.alex.futvre.service.youtube.YoutubeServiceImpl" >		
+	</bean>
+	<!-- 
+	<bean id="lastFMService" class="es.alex.futvre.service.lastFM.LastFMServiceImpl" >		
+	</bean>
+	 -->
+	<bean id="listasPersistenceService" class="es.alex.futvre.service.persistence.listas.ListasPersistenceServiceImpl" >		
+	</bean>
+	<bean id="criptoService" class="es.alex.futvre.service.crypto.CriptoServiceImpl" >		
+	</bean>
+	<bean id="mailService" class="es.alex.futvre.service.mail.MailServiceImpl" >		
+	</bean>
+	<!-- Servicios 	-->	
+	
+	
+	<!-- mensajes de spring security -->
+	 <bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+		    <list>
+			<value>springSecurityMessages</value>
+		    </list>
+		</property>
+	  </bean>
+  <!-- mensajes de spring security -->
+	
+	
+	
+	<!-- Esto activa las anotaciones de autoescaning @service... -->
+	<context:annotation-config />
+	<context:component-scan base-package="es.alex" />
+	
+</beans>

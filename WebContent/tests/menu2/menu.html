@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+	
+	<!-- jquery -->
+	<script type="text/javascript" src="../../js/jquery.js"></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+		
+	
+	<!-- copy to clipboard -->
+	<script type="text/javascript" src="jquery.zclip.js"></script>	
+	
+	<!-- menñu contextual -->
+	<script src="../../js/jquery.contextMenu.js" type="text/javascript"></script>
+    <link href="../../css/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    
+   <script>
+	$(function() {
+		$( "#dialog" ).dialog();
+	});
+	</script>
+   
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		
+	    $('a#copy-description').zclip({
+	        path:'ZeroClipboard.swf',
+	        copy:$('p#description').text()
+	    });
+	
+		$('a#copy-dynamic').zclip({
+			path:'ZeroClipboard.swf',
+			copy:function(){return $('input#dynamic').val();}
+		});
+
+
+		 /**************************************************
+         * Menu 1 (default callback)
+         **************************************************/
+        $.contextMenu({
+            selector: '.context-menu-one-default', 
+            callback: function(key, opt){
+        		//opt.items[key].disabled=true;
+             	//alert("deshabilitado? "+opt.items[key].disabled); 
+             	if(key=='copy')
+             	{ 
+            		$( "#dialog" ).dialog();
+             	}           	
+             },
+            items: {
+                edit: {name: "edit", icon: "edit", disabled:false},
+                cut: {name: "Cut", icon: "cut", disabled:false},
+                copy: {name: "Copy", icon: "copy", disabled:false},
+                paste: {name: "Paste", icon: "paste", disabled:false},
+                "delete": {name: "Delete", icon: "delete", disabled:false},
+                sep1: "---------",
+                quit: {name: "Quit", icon: "quit", disabled:false}
+            }
+        });
+
+              
+        $('#copyText').zclip({
+	        path:'ZeroClipboard.swf',
+	        copy:$('p#description').text()
+	    });
+
+        $('#copyText').click(function (){
+        	 $('#dialog').dialog('close');
+	    });
+
+      
+    	
+	});
+</script>
+	
+</head>
+<body>
+	<p id="description">eeee zClip is a lightweight jQuery "copy to clipboard" plugin built using the popular <a href="http://http://code.google.com/p/zeroclipboard/" target="_blank">Zero Clipboard</a> library. This plugin uses an invisible <a href="http://en.wikipedia.org/wiki/Adobe_Flash" target="_blank">Adobe Flash</a> movie that is fully compatible with <a href="http://en.wikipedia.org/wiki/Adobe_Flash_Player" target="_blank">Flash Player 10</a> and below.</p>
+		<a class="" href="#" id="copy-description">Click here to copy the zClip description paragraph</a>
+		<br><br>
+		<a class="" href="#" id="copy-dynamic">Click here to copy the value of this input:</a>
+		<input style="width: 300px; margin-left: 15px;" id="dynamic" value="Insert any text here." onfocus="if(this.value=='Insert any text here.'){this.value=''}" onblur="if(this.value==''){this.value='Insert any text here.'}" type="text">
+
+
+	<!--  menús -->
+
+	<div id="menus" >
+       
+        <div >
+         	<a href="#" id="eee1" class="context-menu-one-default box menu-1">eee1!!</a>
+         	<a href="#" id="eee2" class="context-menu-one-default box menu-1">eee2!!</a>
+            <strong>menu12</strong>
+
+            <em>(default callback)</em>
+        </div>       
+    </div>
+    
+    <!-- Menús -->
+
+
+	<!-- dialog -->
+	<div id="dialog" title="Basic dialog">
+		<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+		
+		<a href="#" id="copyText">Copiar</a>
+	</div>
+	<!-- dialog -->
+
+</body>
+</html>

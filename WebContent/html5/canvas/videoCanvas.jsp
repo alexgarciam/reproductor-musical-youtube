@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Video en el Lienzo</title>
+<style>
+.cajas{
+display: inline-block;
+margin: 10px;
+padding: 5px;
+border: 1px solid #999999;
+}
+</style>
+<script src="canvasvideo.js"></script>
+</head>
+<body>
+<section class="cajas">
+<video id="medio" width="483" height="272">
+	<source src="http://www.minkbooks.com/content/trailer2.mp4">
+	<source src="http://www.minkbooks.com/content/trailer2.ogg">
+</video>
+</section>
+<section class="cajas">
+<canvas id="lienzo" width="483" height="272">
+Su navegador no soporta el elemento canvas
+</canvas>
+</section>
+</body>
+</html>

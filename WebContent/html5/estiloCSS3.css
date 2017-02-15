@@ -1,0 +1,85 @@
+@CHARSET "ISO-8859-1";
+
+body {
+text-align: center;
+} 
+
+#principal {
+display: block;
+width: 500px;
+margin: 50px auto;
+padding: 15px;
+text-align: center;
+border: 1px solid #999999;
+background: #DDDDDD;
+
+/*
+-moz-border-image: url("diamonds.png") 29 stretch;
+-webkit-border-image: url("diamonds.png") 29 stretch;
+border-image: url("diamonds.png") 29 stretch;
+*/
+
+
+/*Esto invierte la imagen */
+/* 
+-moz-transform: scale(1,-1);
+-webkit-transform: scale(1,-1);
+*/
+
+/* desplazamiento del blocke */
+/*
+-moz-transform: translate(100px);
+-webkit-transform: translate(100px);
+*/
+
+/* Varias transformaciones juntas */
+/*
+-moz-transform: translateY(100px) rotate(45deg) scaleX(0.3);
+-webkit-transform: translateY(100px) rotate(45deg) scaleX(0.3);
+*/
+
+
+/* transiciones */
+-moz-transition: -moz-transform 1s ease-in-out 0.1s;
+-webkit-transition: -webkit-transform 1s ease-in-out 0.1s;
+
+/* segundo borde */
+outline: 2px dashed #000099;
+outline-offset: 15px;
+
+/* NO funciona en IE */
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+
+/*Sombra*/
+-moz-box-shadow: rgb(150,150,150) 5px 5px;
+-webkit-box-shadow: rgb(150,150,150) 5px 5px;
+box-shadow: rgb(150,150,150) 5px 5px;
+
+/*Gradiente linear*/
+background: -webkit-linear-gradient(top, #FFFFFF, #006699);
+background: -moz-linear-gradient(top, #FFFFFF, #006699);
+	
+}
+
+
+/* Transformación dinámica*/
+#principal:hover{
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+}
+
+
+#titulo {
+	font: bold 36px MiNuevaFuente, verdana, sans-serif;
+	
+	/*Sombra para el texto*/
+	text-shadow: rgb(0,0,150) 3px 3px 5px;
+}
+
+
+/* Con esto podemos poner la fuente que queramos en nuestra web haciendo que el navegador se la descargue */
+@font-face { font-family: 'MiNuevaFuente';
+	src: url('font.ttf');
+}

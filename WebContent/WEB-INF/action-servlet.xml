@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-lazy-init="true">
+
+	<!--
+	<bean name="/logon" class="es.ja.sae.eureka.struts.main.action.LogonAction" autowire="byName"/>
+	-->
+
+	<!-- Pagina de acceso -->
+	
+	<!--
+	<bean name="/usuarios" class="es.isoin.test.UsuariosAction" autowire="byName"/>
+	-->	
+	
+	<bean name="/novedades"         				class="es.alex.futvre.action.NovedadesAction" autowire="byName"/>	
+	<bean name="/busqueda"          				class="es.alex.futvre.action.BusquedaAction" autowire="byName"/>
+	<bean name="/searchTrack"       				class="es.alex.futvre.action.SearchTrackAction" autowire="byName"/>
+	<bean name="/searchTrackAlbum"      			class="es.alex.futvre.action.SearchTrackAlbumAction" autowire="byName"/>
+	<bean name="/searchTrackArtist"     			class="es.alex.futvre.action.SearchTrackArtistAction" autowire="byName"/>
+	<bean name="/searchArtist"      				class="es.alex.futvre.action.SearchArtistAction" autowire="byName"/>
+	<bean name="/searchAlbum"       				class="es.alex.futvre.action.SearchAlbumAction" autowire="byName"/>
+	<bean name="/reproducirVideo"   				class="es.alex.futvre.action.ReproducirVideoAction" autowire="byName"/>
+	<bean name="/youtubeSearch"     				class="es.alex.futvre.action.YoutubeSearchAction" autowire="byName"/>
+	<bean name="/getAlbumTrack"     				class="es.alex.futvre.action.GetAlbumTrackAction" autowire="byName"/>
+	<bean name="/getListaRepAlbum"  				class="es.alex.futvre.action.GetListaRepAlbumAction" autowire="byName"/>
+	<bean name="/getAlbumImage"     				class="es.alex.futvre.action.GetAlbumImageAction" autowire="byName"/>
+	<bean name="/getListaRepArtist" 				class="es.alex.futvre.action.GetListaRepArtistAction" autowire="byName"/>
+	<bean name="/copyHttp"    						class="es.alex.futvre.action.SetClipBoardAction" autowire="byName"/>
+	<bean name="/hypedArtists"    					class="es.alex.futvre.action.GetHypedArtistsAction" autowire="byName"/>
+	<bean name="/topArtists"    					class="es.alex.futvre.action.GetTopArtistsAction" autowire="byName"/>
+	<bean name="/hypedTracks"    					class="es.alex.futvre.action.GetHypedTracksAction" autowire="byName"/>
+	<bean name="/lovedTracks"    					class="es.alex.futvre.action.GetLovedTracksAction" autowire="byName"/>
+	<bean name="/getTrackInfo"    					class="es.alex.futvre.action.GetTrackInfoAction" autowire="byName"/>
+	<bean name="/searchArtistHeader"    			class="es.alex.futvre.action.SearchArtistAction1" autowire="byName"/>
+	<bean name="/getAlbumsArtista"      			class="es.alex.futvre.action.GetAlbumsArtistaAction" autowire="byName"/>	
+	<bean name="/getAlbumArtista"       			class="es.alex.futvre.action.GetAlbumArtistaAction" autowire="byName"/>
+	<bean name="/getUrlTrack"           			class="es.alex.futvre.action.GetUrlTrackAction" autowire="byName"/>
+	<bean name="/openTrack"            	 			class="es.alex.futvre.action.OpenTrackAction" autowire="byName"/>
+	<bean name="/playTrack"             			class="es.alex.futvre.action.PlayTrackAction" autowire="byName"/>
+	<bean name="/setListaRep"           			class="es.alex.futvre.action.SetListaRepAction" autowire="byName"/>
+	<bean name="/getListaRep"           			class="es.alex.futvre.action.GetListaRepAction" autowire="byName"/>
+	<bean name="/cerrarSession"         			class="es.alex.futvre.action.CerrarSessionAction" autowire="byName"/>
+	<bean name="/getListasUsuario"      			class="es.alex.futvre.action.GetUserLists" autowire="byName"/>
+	<bean name="/addListaUsuario"       			class="es.alex.futvre.action.addUserList" autowire="byName"/>	
+	<bean name="/addCancionToUserList"      		class="es.alex.futvre.action.addCancionToUserList" autowire="byName"/>
+	<bean name="/getCancionesFromUserList"  		class="es.alex.futvre.action.GetCancionesFromUserList" autowire="byName"/>
+	<bean name="/SetListaRepUserAction"     		class="es.alex.futvre.action.SetListaRepUserAction" autowire="byName"/>
+	<bean name="/RemoveListaUsuario"                class="es.alex.futvre.action.RemoveListaUsuario" autowire="byName"/>
+	<bean name="/RemoveCancionFromListaUsuario"     class="es.alex.futvre.action.RemoveCancionFromListaUsuario" autowire="byName"/>
+	<bean name="/getFavoritosFromUser"     			class="es.alex.futvre.action.GetFavoritosFromUser" autowire="byName"/>	
+	<bean name="/addCancionToFavoritosUser"     	class="es.alex.futvre.action.AddCancionToFavoritosUser" autowire="byName"/>
+	<bean name="/RemoveCancionFromFavoritos"     	class="es.alex.futvre.action.RemoveCancionFromFavoritos" autowire="byName"/>
+	<bean name="/SetFavRepUserAction"		     	class="es.alex.futvre.action.SetFavRepUserAction" autowire="byName"/>
+	<bean name="/getFavorito"		     			class="es.alex.futvre.action.GetFavoritoAction" autowire="byName"/>
+	<bean name="/getCancionLista"		     		class="es.alex.futvre.action.GetCancionListaAction" autowire="byName"/>
+	<bean name="/checkUserName"		     			class="es.alex.futvre.action.CheckUserNameAction" autowire="byName"/>
+	<bean name="/checkUserEmail"	     			class="es.alex.futvre.action.CheckUserEmailAction" autowire="byName"/>
+	<bean name="/registrarUsuario"	     			class="es.alex.futvre.action.RegisterUserAction" autowire="byName"/>
+	<bean name="/validateAccount"	     			class="es.alex.futvre.action.ValidateAccountAction" autowire="byName"/>
+	
+</beans>
+

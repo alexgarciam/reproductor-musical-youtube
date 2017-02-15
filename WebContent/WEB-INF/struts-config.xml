@@ -1,0 +1,405 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="QRForm" type="es.alex.futvre.form.FutvreForm"></form-bean>		
+	</form-beans>	
+
+	<!-- =========================================== Global Forward Definitions -->
+
+    <global-forwards>
+        <!-- Default forward to "Welcome" action -->
+        <!-- Demonstrates using index.jsp to forward -->
+        <forward
+            name="welcome"
+            path="/Welcome.do"/>
+    </global-forwards>	
+	
+	<!-- =========================================== Action Mapping Definitions -->
+
+    <action-mappings>
+            <!-- Default "Welcome" action --> 
+            <!-- Forwards to Welcome.jsp --> 
+        <action path="/Welcome" forward="/pages/Welcome.jsp"/>
+      
+      <!-- 
+      	<action path="/usuarios2" type="org.springframework.web.struts.DelegatingActionProxy">
+    		<forward name="success" path="/pages/Welcome.jsp"/>
+    	</action>
+      -->
+    	
+    	
+    	<action path="/novedades" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/novedades.jsp"/>
+    	</action>
+    	
+    	<action path="/busqueda" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/busqueda2.jsp"/>
+    	</action>
+    	
+    	<action path="/searchTrack" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/searchTracks2.jsp"/>
+    	</action>
+    	
+    	<action path="/searchTrackAlbum" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/searchTracks_albums.jsp"/>
+    	</action>
+    	
+    	<action path="/searchTrackArtist" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/searchTracks_artists.jsp"/>
+    	</action>
+    	
+    	<action path="/searchArtist" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/searchArtist.jsp"/>
+    	</action>
+    	
+    	<action path="/searchArtistHeader" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/jsonObject.jsp"/>
+    	</action>
+    	
+    	<action path="/getAlbumsArtista" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/jsonObject.jsp"/>
+    	</action>
+    	
+    	
+    	<action path="/searchAlbum" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/searchAlbum.jsp"/>
+    	</action>
+    	
+    	<action path="/getAlbumArtista" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/jsonObject.jsp"/>
+    	</action>
+    	
+    	<action path="/reproducirVideo" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/reproducirVideo.jsp"/>
+    	</action>
+    	
+    	<action path="/getAlbumTrack" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/reproducirVideo.jsp"/>
+    	</action>
+    	
+    	<action path="/getAlbumImage" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/imageAlbum.jsp"/>
+    	</action>
+    	
+    	<action path="/getListaRepAlbum" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/listaRepAlbum.jsp"/>
+    	</action>
+    	
+    	<action path="/getListaRepArtist" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/listaRepAlbum.jsp"/>
+    	</action>
+    	
+    	<action path="/youtubeSearch" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/searchYoutube.jsp"/>
+    	</action>
+    	
+    	<action path="/copyHttp" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/searchYoutube.jsp"/>
+    	</action>
+    	
+    	<action path="/hypedArtists" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/hypedArtist.jsp"/>
+    	</action>
+    	
+    	<action path="/topArtists" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/topArtist.jsp"/>
+    	</action>
+    	
+    	<action path="/hypedTracks" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/hypedTracks.jsp"/>
+    	</action>
+    	
+    	<action path="/lovedTracks" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/lovedTracks.jsp"/>
+    	</action>
+    	
+    	<action path="/getTrackInfo" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/getTrackInfo.jsp"/>
+    	</action>
+    	
+    	<action path="/getUrlTrack" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/jsonObject.jsp"/>
+    	</action>
+    	
+    	<action path="/openTrack" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/indexTest3.jsp"/>
+    	</action>
+    	
+    	<action path="/playTrack" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/indexTest3.jsp"/>
+    	</action>
+    	
+    	<action path="/setListaRep" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/getListaRep" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/cerrarSession" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/getListasUsuario" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/listasUsuarioJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/addListaUsuario" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/listasUsuarioJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/addCancionToUserList" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/listasUsuarioJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/getCancionesFromUserList" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/userLists.jsp"/>
+    	</action>
+    	
+    	<action path="/SetListaRepUserAction" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/RemoveListaUsuario" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/RemoveCancionFromListaUsuario" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/getFavoritosFromUser" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/music/userFavoritos.jsp"/>
+    	</action>
+    	
+    	<action path="/addCancionToFavoritosUser" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/RemoveCancionFromFavoritos" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/SetFavRepUserAction" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/getFavorito" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/getCancionLista" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/checkUserName" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/checkUserEmail" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/registrarUsuario" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	<action path="/validateAccount" 
+    			type="org.springframework.web.struts.DelegatingActionProxy"
+    			name="QRForm"
+     			scope="request"
+     			validate="false">
+    		<forward name="success" path="/testJSON.jsp"/>
+    	</action>
+    	
+    	
+		
+    </action-mappings>
+	
+	<!-- ======================================== Message Resources Definitions -->
+	
+    <message-resources parameter="MessageResource" />
+			
+	<!-- Plugin para cargar los action de struts como beans de spring  	-->
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn"></plug-in>
+
+	
+</struts-config>

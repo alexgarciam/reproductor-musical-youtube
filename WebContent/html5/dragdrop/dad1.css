@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+#cajasoltar {
+	float: left;
+	width: 500px;
+	height: 300px;
+	margin: 10px;
+	border: 1px solid #999999;
+}
+
+#cajaimagenes {
+	float: left;
+	width: 320px;
+	margin: 10px;
+	border: 1px solid #999999;
+}
+
+#cajaimagenes>img {
+	float: left;
+	padding: 5px;
+}

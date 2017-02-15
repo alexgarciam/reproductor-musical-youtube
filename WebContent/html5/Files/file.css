@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+#cajaformulario {
+	float: left;
+	padding: 20px;
+	border: 1px solid #999999;
+}
+
+#cajadatos {
+	float: left;
+	width: 500px;
+	margin-left: 20px;
+	padding: 20px;
+	border: 1px solid #999999;
+}
+
+.directorio {
+	color: #0000FF;
+	font-weight: bold;
+	cursor: pointer;
+}

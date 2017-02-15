@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:security="http://www.springframework.org/schema/security"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.xsd" >
+
+    <security:http auto-config="true" >
+
+        <security:intercept-url
+            access="ROLE_ADMIN,ROLE_ANONYMOUS"
+            pattern="/**" />        
+       
+        <security:logout logout-success-url="/indexTest4.jsp" />
+        
+        <security:form-login
+            always-use-default-target="true"
+            authentication-failure-url="/indexTest4.jsp?authfailed=true"
+            default-target-url="/indexTest4.jsp"
+            login-page="/indexTest4.jsp" />
+    </security:http>
+
+    <!-- DECLARACION PARA QUE LOS USUARIOS LOS COJA DE LA BASE DE DATOS -->
+
+<!-- 
+    <security:authentication-provider>
+        <security:jdbc-user-service data-source-ref="myDataSource" />
+    </security:authentication-provider>
+ -->    
+     <security:authentication-provider user-service-ref="customUserDetailsService">	        		
+	 </security:authentication-provider>
+
+    
+    <!-- esto es la seguridad en AOP (Aspectos) -->
+    <security:global-method-security secured-annotations="enabled" jsr250-annotations="enabled" >  
+        <!-- 
+        <security:protect-pointcut access="ROLE_ADMIN" expression="execution(* es.alex.futvre.service.lastFM.LastFMServiceImpl.*(..))"/>
+         -->
+         <!-- tambien tengo esto de ejemplo con anotaciones en los metodos, las anotaciones tambien pueden ser en la clase
+         @Secured("ROLE_ADMIN")
+	public List<LastFMGTrackDTO> getLovedTracks() throws LastFMServiceException 
+          -->
+    </security:global-method-security>
+    <!-- esto es la seguridad en AOP (Aspectos, parece que no está funcionando muy bien...) -->
+    
+     
+</beans>

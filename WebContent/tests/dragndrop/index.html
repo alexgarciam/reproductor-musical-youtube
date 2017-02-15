@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+ 
+<style>
+    #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; border: 1px solid black }
+  
+	.hover{ background-color: blue; }
+	.hover2{ background-color: fuchsia; }
+	
+	
+    </style>
+    
+    
+    <script>
+    $(function() {
+        $( ".draggable" ).draggable({
+        	revert: true , 
+        	cursor: "move",
+        	opacity: 0.35,
+        	 zIndex: 9999999999999,
+        	 helper: function(event, ui) {
+        	        var foo = $('<span style="white-space:nowrap;border:1px solid #CCC;background-color: yellow;">DRAG TEST</span>').text($(this).text() + " helper"); 
+        	        return foo;
+        	    }
+        	});
+        $( "#droppable" ).droppable({
+           // accept: "#draggable",
+            //activeClass: "hover2",
+            hoverClass: "hover",
+            drop: function( event, ui ) {
+            	var draggable = ui.draggable;
+            	 $(ui.draggable).attr('src','/path/to/different/image');
+           		alert( 'The square with ID "' + draggable.attr('id') + '" was dropped onto me!' );
+            }
+        });
+    });
+    </script>
+ 
+</head>
+<body>
+ 
+<div id="content" style="height: 400px;"> 
+ 
+  	<div id="droppable" > </div>
+  
+  	<div></div>
+  
+  
+	  <div >
+	  <table>
+		<tr>
+	  		<td class="draggable" id="draggable"><div id="uno" >uno</div></td>
+	  		<td class="draggable" id="draggable"><div id="dos">dos</div></td>
+	  		<td class="draggable" id="draggable"><div id="tres">tres</div></td>
+	  	</tr>  
+	  </table> 
+	 </div>
+ 
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,470 @@
+#colaRepro_table table {
+	/*width: 650px;*/
+	border:1px solid #000000;
+	border-spacing: 0px; }
+
+#colaRepro_table table a, #colaRepro_table table, #colaRepro_table tbody, #colaRepro_table tfoot, #colaRepro_table tr, #colaRepro_table th, #colaRepro_table td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#colaRepro_table table caption {
+	font-size: 1.8em;
+	text-align: left;
+	text-indent: 100px;
+	background: url(images/bg_caption.gif) left top;
+	height: 40px;
+	color: #FFFFFF;
+	border:1px solid #000000; }
+
+#colaRepro_table thead th {
+	background: url(images/bg_th.gif) left;
+	height: 21px;
+	color: #FFFFFF;
+	font-size: 0.8em;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 0px 7px;
+	margin: 20px 0px 0px;
+	text-align: left; }
+
+#colaRepro_table tbody tr {	background: #ffffff; }
+
+#colaRepro_table tbody tr.odd {	background: #f0f0f0; }
+
+#colaRepro_table tbody th {
+	background: url(images/arrow_white.gif) left center no-repeat;
+	background-position: 5px;
+	padding-left: 40px !important; }
+
+#colaRepro_table tbody tr.odd th {
+	background: url(images/arrow_grey.gif) left center no-repeat;
+	background-position: 5px;
+	padding-left: 40px !important; }
+
+#colaRepro_table tbody th,#colaRepro_table  tbody td {
+	font-size: 0.8em;
+	line-height: 1.4em;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	padding: 10px 7px;
+	border-bottom: 1px solid #eebf4f;
+	text-align: left; }
+
+#colaRepro_table tbody a {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none; }
+
+#colaRepro_table tbody a:hover {
+	color: #eebf4f;
+	text-decoration: none; }
+
+#colaRepro_table tbody tr:hover th {
+	background: #eebf4f url(images/arrow_red.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+#colaRepro_table tbody tr.odd:hover th {
+	background: #eebf4f url(images/arrow_black.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+#colaRepro_table tbody tr:hover th a, #colaRepro_table tr.odd:hover th a	{
+		 color: #ffffff; }
+
+#colaRepro_table tbody tr:hover td, #colaRepro_table tr:hover td a, #colaRepro_table tr.odd:hover td, #colaRepro_table tr.odd:hover td a {
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+#colaRepro_table tbody tr.odd:hover td, #colaRepro_table tr.odd:hover td a{
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+#colaRepro_table tfoot th, #colaRepro_table tfoot td {
+	background: #ffffff url(images/bg_footer.gif) repeat-x bottom;
+	font-size: 0.8em;
+	color: #ffffff;
+	height: 21px;
+	}
+
+	
+#miTestClass{
+	background-color:blue;
+	font-size: 4.8em;
+	color: #ffffff;
+	height: 21px;
+}
+
+/**********************************************************************
+		Para los albums		
+***********************************************************************/
+
+#album_table table {
+	/*width: 650px;*/
+}
+
+#album_table table a, #colaRepro_table table, #colaRepro_table tbody, #colaRepro_table tfoot, #colaRepro_table tr, #colaRepro_table th, #colaRepro_table td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#album_table table caption {
+	font-size: 1.8em;
+	text-align: left;
+	text-indent: 100px;
+	background: url(images/bg_caption.gif) left top;
+	height: 40px;
+	color: #FFFFFF;}
+
+#album_table thead th {
+	background: url(images/bg_th.gif) left;
+	height: 21px;
+	color: #FFFFFF;
+	font-size: 0.8em;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 0px 7px;
+	margin: 20px 0px 0px;
+	text-align: left; }
+
+#album_table tbody tr {	background: #ffffff; }
+
+#album_table tbody tr.odd {	background: #f0f0f0; }
+
+#album_table tbody th {
+	background: url(images/arrow_white.gif) left center no-repeat;
+	background-position: 5px;
+	padding-left: 40px !important; }
+
+#album_table tbody tr.odd th {
+	background: url(images/arrow_grey.gif) left center no-repeat;
+	background-position: 5px;
+	padding-left: 40px !important; }
+
+#album_table tbody th,#colaRepro_table  tbody td {
+	font-size: 0.8em;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;		
+	text-align: left; }
+
+#album_table tbody a {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none; }
+
+#album_table tbody a:hover {
+	color: #ffffff;
+	text-decoration: underline; }
+
+#album_table tbody tr:hover th {
+	background: #eebf4f url(images/arrow_red.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+#album_table tbody tr.odd:hover th {
+	background: #eebf4f url(images/arrow_black.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+#album_table tbody tr:hover th a, #colaRepro_table tr.odd:hover th a	{
+		 color: #eebf4f; }
+
+#album_table tbody tr:hover td, #colaRepro_table tr:hover td a, #colaRepro_table tr.odd:hover td, #colaRepro_table tr.odd:hover td a {
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+#album_table tbody tr.odd:hover td, #colaRepro_table tr.odd:hover td a{
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+#album_table tfoot th, #colaRepro_table tfoot td {
+	background: #eebf4f url(images/bg_footer.gif) repeat-x bottom;
+	font-size: 0.8em;
+	color: #ffffff;
+	height: 21px;
+	}
+
+
+/**********************************************************************
+		Para los albums	de artistas	
+***********************************************************************/
+
+.album_artista table {
+	/*width: 650px;*/
+}
+
+.album_artista table a, #colaRepro_table table, #colaRepro_table tbody, #colaRepro_table tfoot, #colaRepro_table tr, #colaRepro_table th, #colaRepro_table td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.album_artista table caption {
+	font-size: 1.8em;
+	text-align: left;
+	text-indent: 100px;
+	background: url(images/bg_caption.gif) left top;
+	height: 40px;
+	color: #FFFFFF;}
+
+.album_artista thead th {
+	background: url(images/bg_th.gif) left;
+	height: 21px;
+	color: #FFFFFF;
+	font-size: 0.8em;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 0px 7px;
+	margin: 20px 0px 0px;
+	text-align: left; }
+
+.album_artista tbody tr {	background: #ffffff; }
+
+.album_artista tbody tr.odd {	background: #f0f0f0; }
+
+.album_artista tbody td.odd {	background: #f0f0f0; }
+
+.album_artista tbody th {
+	background: url(images/arrow_white.gif) left center no-repeat;
+	background-position: 5px;
+	padding-left: 40px !important; }
+
+.album_artista tbody tr.odd th {
+	background: url(images/arrow_grey.gif) left center no-repeat;
+	background-position: 5px;
+	padding-left: 40px !important; }
+
+.album_artista tbody th,.menuc  tbody td {
+	font-size: 0.8em;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;		
+	text-align: left; }
+
+.album_artista tbody a {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none; }
+
+.album_artista tbody a:hover {
+	color: #ffffff;
+	text-decoration: underline; }
+
+.album_artista tbody tr:hover th {
+	background: #eebf4f url(images/arrow_red.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+
+
+.album_artista tbody tr.odd:hover th {
+	background: #eebf4f url(images/arrow_black.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+.album_artista tbody tr:hover th a, .menuc tr.odd:hover th a	{
+		 color: #eebf4f; }
+
+.album_artista tbody tr:hover td, .menuc tr:hover td a, .menuc tr.odd:hover td, .menuc tr.odd:hover td a {
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+.album_artista tbody tr.odd:hover td, .menuc tr.odd:hover td a{
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+.album_artista tfoot th, .menuc tfoot td {
+	background: #eebf4f url(images/bg_footer.gif) repeat-x bottom;
+	font-size: 0.8em;
+	color: #ffffff;
+	height: 21px;
+	}
+
+
+/**********************************************************************
+		Para las busquedas
+***********************************************************************/
+
+#searchTable table {
+	/*width: 650px;*/
+}
+
+#searchTable table a, #searchTable table, #searchTable tbody, #searchTable tfoot, #searchTable tr, #searchTable th, #searchTable td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#searchTable table caption {
+	font-size: 1.8em;
+	text-align: left;
+	text-indent: 100px;
+	background: url(images/bg_caption.gif) left top;
+	height: 40px;
+	color: #FFFFFF;}
+
+#searchTable thead th {
+	background: url(images/bg_th.gif) left;
+	height: 21px;
+	color: #FFFFFF;
+	font-size: 0.8em;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 0px 7px;
+	margin: 20px 0px 0px;
+	text-align: left; }
+
+#searchTable tbody tr {	background: #ffffff; }
+
+#searchTable tbody tr.odd {	background: #f0f0f0; }
+
+#searchTable tbody td.odd {	background: #f0f0f0; }
+
+#searchTable tbody th {
+	background: url(images/arrow_white.gif) left center no-repeat;
+	background-position: 5px;
+	padding-left: 40px !important; }
+
+#searchTable tbody tr.odd th {
+	background: url(images/arrow_grey.gif) left center no-repeat;
+	background-position: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left: 40px !important; }
+
+#searchTable tbody th,.menuc  tbody td {
+	font-size: 0.8em;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;		
+	text-align: left; }
+
+#searchTable tbody a {
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none; }
+
+#searchTable tbody a:hover {
+	color: #ffffff;
+	text-decoration: underline; }
+
+#searchTable tbody tr:hover th {
+	background: #eebf4f url(images/arrow_red.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+
+
+#searchTable tbody tr.odd:hover th {
+	background: #eebf4f url(images/arrow_black.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+#searchTable tbody tr:hover th a, .menuc tr.odd:hover th a	{
+		 color: #eebf4f; }
+
+#searchTable tbody tr:hover td, .menuc tr:hover td a, .menuc tr.odd:hover td, .menuc tr.odd:hover td a {
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+#searchTable tbody tr.odd:hover td, .menuc tr.odd:hover td a{
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+#searchTable tfoot th, .menuc tfoot td {
+	background: #eebf4f url(images/bg_footer.gif) repeat-x bottom;
+	font-size: 0.8em;
+	color: #ffffff;
+	height: 21px;
+	}
+
+/**********************************************************************
+		Para las listas del usuario
+***********************************************************************/
+
+#tableListaUsuario table {
+	/*width: 650px;*/
+}
+
+#tableListaUsuario table a, #tableListaUsuario table, #tableListaUsuario tbody, #tableListaUsuario tfoot, #tableListaUsuario tr, #tableListaUsuario th, #tableListaUsuario td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#tableListaUsuario table caption {
+	font-size: 1.8em;
+	text-align: left;
+	text-indent: 100px;
+	background: url(images/bg_caption.gif) left top;
+	height: 40px;
+	color: #FFFFFF;}
+
+#tableListaUsuario thead th {
+	background: url(images/bg_th.gif) left;
+	height: 21px;
+	color: #FFFFFF;
+	font-size: 0.8em;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 0px 7px;
+	margin: 20px 0px 0px;
+	text-align: left; }
+
+#tableListaUsuario tbody tr {	background: #ffffff; }
+
+#tableListaUsuario tbody tr.odd {	background: #f0f0f0; }
+
+#tableListaUsuario tbody td.odd {	background: #f0f0f0; }
+
+#tableListaUsuario tbody th {
+	background: url(images/arrow_white.gif) left center no-repeat;
+	background-position: 5px;
+	padding-left: 40px !important; }
+
+#tableListaUsuario tbody tr.odd th {
+	background: url(images/arrow_grey.gif) left center no-repeat;
+	background-position: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left: 40px !important; }
+
+#tableListaUsuario tbody th,.menuc  tbody td {
+	font-size: 0.8em;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;		
+	text-align: left; }
+
+#tableListaUsuario tbody a {
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none; }
+
+#tableListaUsuario tbody a:hover {
+	color: #ffffff;
+	text-decoration: underline; }
+
+#tableListaUsuario tbody tr:hover th {
+	background: #eebf4f url(images/arrow_red.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+
+
+#tableListaUsuario tbody tr.odd:hover th {
+	background: #eebf4f url(images/arrow_black.gif) left center no-repeat;
+	background-position: 5px;
+	color: #ffffff; }
+
+#tableListaUsuario tbody tr:hover th a, .menuc tr.odd:hover th a	{
+		 color: #eebf4f; }
+
+#tableListaUsuario tbody tr:hover td, .menuc tr:hover td a, .menuc tr.odd:hover td, .menuc tr.odd:hover td a {
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+#tableListaUsuario tbody tr.odd:hover td, .menuc tr.odd:hover td a{
+	background: #eebf4f;
+	color: #ffffff;	 }
+
+#tableListaUsuario tfoot th, .menuc tfoot td {
+	background: #eebf4f url(images/bg_footer.gif) repeat-x bottom;
+	font-size: 0.8em;
+	color: #ffffff;
+	height: 21px;
+	}

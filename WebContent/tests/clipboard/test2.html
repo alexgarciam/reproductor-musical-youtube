@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+
+
+	<script type="text/javascript" src="../../js/jquery.js"></script>
+	<!-- menu contextual -->
+	<script src="../../js/jquery.contextMenu.js" type="text/javascript"></script>
+    <link href="../../css/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    
+    // funciones para copia de enlaces de canciones  
+    OCULTO="none";
+    VISIBLE="block";
+    
+    function mostrar(blo) {
+    	document.getElementById(blo).style.display=VISIBLE;
+    }
+    
+    function ocultar(blo) {
+    	document.getElementById(blo).style.display=OCULTO;
+    }
+    
+    function OcultarDiv(name) {
+   	 ocultar(name);
+    }
+
+    $(document).ready(function(){ 		    	
+
+    	$('#midiv').hide();		
+		 /**************************************************
+         * Menu 1 (default callback)
+         **************************************************/
+        $.contextMenu({
+            selector: '.context-menu-one-default', 
+            callback: function(key, opt){
+        		if(key=='copy')
+             	{ 
+                 	var texto="nuevo texto a copiar";
+                 	var html="El enlace ha sido copiado al portapeles <br /> <embed id='flashCopy' src='test2.swf' flashvars='texto="+texto+"' width='100px' heigth='65px' type='application/x-shockwave-flash'></embed>";
+        			$('#midiv').html(html);
+            		$('#midiv').show();
+             	}           	
+             },
+            items: {
+               
+                copy: {name: "Copy", icon: "copy", disabled:false},
+                quit: {name: "Quit", icon: "quit", disabled:false}
+            }
+        });
+
+		
+    });
+    
+    </script>
+
+</head>
+<body>
+test propio 2
+
+
+<!--  menús -->
+
+	<div id="menus" >
+       
+        <div >
+         	<a href="#" id="eee1" class="context-menu-one-default box menu-1">eee1!!</a>
+         	<a href="#" id="eee2" class="context-menu-one-default box menu-1">eee2!!</a>
+            <strong>menu12</strong>
+            <em>(default callback)</em>
+        </div>      
+         
+    </div>
+    
+    <!-- Menús -->
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="midiv" style=" position:absolute;top:300px;left:300px ; z-index:10000; position:absolute;background-color: black;width: 100px;height: 65px">	 
+</div>
+
+
+
+
+
+</body>
+</html>
